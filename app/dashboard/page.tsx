@@ -1,4 +1,5 @@
 import { Card } from "@/components/card";
+import { MultipleChart } from "@/components/Charts/multiple-chart";
 import { DashbordCard } from "@/components/dashboard-card";
 import { DataFilter } from "@/components/date-filter";
 
@@ -43,6 +44,7 @@ export default function DashboardPage() {
           ></DashbordCard>
         </div>
       </Card>
+      <MultipleChart />
     </div>
   );
 }
