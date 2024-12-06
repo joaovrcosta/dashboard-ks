@@ -9,60 +9,109 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { Card } from "../card";
 
 const chartData = [
   { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
   { date: "xx/xx/xx", desktop: 22000, mobile: 14000, tablet: 8000 },
   { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
+  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
 ];
 
 export function MultipleChart() {
   return (
-    <div className="flex justify-center items-center w-full  overflow-x-auto">
-      {/* Div com bordas arredondadas, fundo e largura mínima com rolagem */}
-      <div className="bg-transparent rounded-lg p-6 w-full min-w-[520px]">
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart
-            data={chartData}
-            margin={{ top: 20, right: 20, left: 40, bottom: 20 }}
-          >
-            {/* Grade com linhas e fundo */}
-            <CartesianGrid strokeDasharray="3 3" stroke="#332a63" />
+    <Card title="Faturamento Diário" className="mt-4 px-2">
+      <div className="flex flex-col items-center w-full overflow-x-auto space-y-4">
+        <div className="flex w-full mt-4">
+          <div className="text-center bg-transparent text-white py-4 px-0 space-y-2 ">
+            <p className="text-xs font-normal">Pagos</p>
+            <p className="text-xs font-normal">Gerados</p>
+          </div>
 
-            {/* Eixo X com formatação */}
-            <XAxis
-              dataKey="date"
-              axisLine={false}
-              tickLine={false}
-              tick={{ fill: "#fff", fontSize: 12 }}
-              padding={{ left: 10, right: 10 }}
-            />
+          <div className="flex items-center justify-around ml-8 w-full lg:gap-3 xl:gap-3 md:gap-3 gap-12">
+            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
+              <div className="w-full px-2 border-b border-gray-500">
+                <p className="text-xs font-bold pb-1">R$16.044,06</p>
+              </div>
+              <p className="text-xs font-bold">R$16.044,06</p>
+            </div>
+            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
+              <div className="w-full px-2 border-b border-gray-500">
+                <p className="text-xs font-bold pb-1">R$16.044,06</p>
+              </div>
+              <p className="text-xs font-bold">R$16.044,06</p>
+            </div>
+            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
+              <div className="w-full px-2 border-b border-gray-500">
+                <p className="text-xs font-bold pb-1">R$16.044,06</p>
+              </div>
+              <p className="text-xs font-bold">R$16.044,06</p>
+            </div>
+            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
+              <div className="w-full px-2 border-b border-gray-500">
+                <p className="text-xs font-bold pb-1">R$16.044,06</p>
+              </div>
+              <p className="text-xs font-bold">R$16.044,06</p>
+            </div>
+          </div>
+        </div>
 
-            {/* Eixo Y com valores customizados */}
-            <YAxis
-              axisLine={false}
-              tickLine={false}
-              tick={{ fill: "#fff", fontSize: 12 }}
-              tickFormatter={(value) => value.toLocaleString("en-US")}
-            />
+        <div className="bg-transparent rounded-lg w-full min-w-[600px] ml-64 lg:ml-0 xl:ml-0 md:ml-0">
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={chartData}
+              margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#332a63" />
 
-            {/* Tooltip customizado */}
-            <Tooltip
-              cursor={{ fill: "rgba(255, 255, 255, 0.2)" }}
-              contentStyle={{
-                backgroundColor: "#332a63",
-                borderRadius: "8px",
-                color: "#fff",
-              }}
-            />
+              <XAxis
+                dataKey="date"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#fff", fontSize: 20 }}
+                padding={{ left: 10, right: 10 }}
+              />
 
-            {/* Barras com cores brilhantes */}
-            <Bar dataKey="desktop" fill="#00d8ff" radius={[10, 10, 0, 0]} />
-            <Bar dataKey="tablet" fill="#ff6b6b" radius={[10, 10, 0, 0]} />
-            <Bar dataKey="mobile" fill="#feca57" radius={[10, 10, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#fff", fontSize: 12 }}
+                tickFormatter={(value) => value.toLocaleString("en-US")}
+              />
+
+              <Tooltip
+                cursor={{ fill: "rgba(255, 255, 255, 0.2)" }}
+                contentStyle={{
+                  backgroundColor: "#332a63",
+                  borderRadius: "8px",
+                  color: "#fff",
+                }}
+              />
+
+              <Bar dataKey="desktop" fill="#00d8ff" radius={[10, 10, 0, 0]} />
+              <Bar dataKey="tablet" fill="#ff6b6b" radius={[10, 10, 0, 0]} />
+              <Bar dataKey="mobile" fill="#feca57" radius={[10, 10, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+
+          <div className="flex items-center justify-center space-x-6">
+            <div className="flex items-center flex-col space-x-2">
+              <div className="bg-[#00d8ff] rounded-full h-[20px] w-[20px]"></div>
+              <p className="text-white text-sm font-normal">Pagos</p>
+            </div>
+
+            <div className="flex flex-col items-center space-x-2">
+              <div className="bg-[#ff6b6b] rounded-full h-[20px] w-[20px]"></div>
+              <p className="text-white text-sm font-normal">Gerados</p>
+            </div>
+
+            <div className="flex items-center flex-col space-x-2">
+              <div className="bg-[#feca57] rounded-full h-[20px] w-[20px]"></div>
+              <p className="text-white text-sm font-normal">Média</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Card>
   );
 }
