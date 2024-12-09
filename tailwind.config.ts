@@ -82,6 +82,7 @@ export default {
       backgroundImage: {
         "custom-gradient": "linear-gradient(to bottom, #4a90e2, #8a4baf)",
         "card-gradient": "linear-gradient(to bottom, #4D409E, #3F2CA9)",
+        "bar-gradient": "linear-gradient(to bottom, #00d8ff, #ff6b6b)",
       },
     },
   },
