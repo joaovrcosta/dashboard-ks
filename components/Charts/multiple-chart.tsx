@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Card } from "../card";
+import { InfoCard } from "../info-card";
 
 const chartData = [
   { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
@@ -29,30 +30,10 @@ export function MultipleChart() {
           </div>
 
           <div className="flex items-center justify-around ml-8 w-full lg:gap-3 xl:gap-3 md:gap-3 gap-12">
-            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
-              <div className="w-full px-2 border-b border-gray-500">
-                <p className="text-xs font-bold pb-1">R$16.044,06</p>
-              </div>
-              <p className="text-xs font-bold">R$16.044,06</p>
-            </div>
-            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
-              <div className="w-full px-2 border-b border-gray-500">
-                <p className="text-xs font-bold pb-1">R$16.044,06</p>
-              </div>
-              <p className="text-xs font-bold">R$16.044,06</p>
-            </div>
-            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
-              <div className="w-full px-2 border-b border-gray-500">
-                <p className="text-xs font-bold pb-1">R$16.044,06</p>
-              </div>
-              <p className="text-xs font-bold">R$16.044,06</p>
-            </div>
-            <div className="text-center bg-card-gradient text-white py-4 rounded-2xl shadow-md space-y-1">
-              <div className="w-full px-2 border-b border-gray-500">
-                <p className="text-xs font-bold pb-1">R$16.044,06</p>
-              </div>
-              <p className="text-xs font-bold">R$16.044,06</p>
-            </div>
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
           </div>
         </div>
 

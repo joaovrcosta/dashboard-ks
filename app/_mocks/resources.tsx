@@ -1,3 +1,7 @@
+import { FunnelItem } from "@/components/funnel-item";
+import { LowStockItem } from "@/components/low-stock-item";
+import { ShippingItem } from "@/components/shipping-item";
+import { TopProducts } from "@/components/top-products";
 import {
   Boxes,
   CreditCard,
@@ -18,25 +22,25 @@ export const accordionData = [
     id: "item-1",
     title: "Funil de Vendas",
     icon: <Filter />,
-    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+    content: <FunnelItem />,
   },
   {
     id: "item-2",
     title: "Produtos com Estoque Baixo",
     icon: <Package />,
-    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+    content: <LowStockItem />,
   },
   {
     id: "item-3",
     title: "Top 10 - Produtos (Faturamento)",
     icon: <Boxes />,
-    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+    content: <TopProducts />,
   },
   {
     id: "item-4",
     title: "Frete",
     icon: <Truck />,
-    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+    content: <ShippingItem />,
   },
   {
     id: "item-5",

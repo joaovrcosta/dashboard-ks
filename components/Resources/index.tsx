@@ -15,7 +15,7 @@ export function Resources() {
           <AccordionItem
             key={id}
             value={id}
-            className="bg-[#19123c] border-none px-6 transition-all duration-300 rounded-3xl"
+            className="bg-[#19123c] border-none px-3 transition-all duration-300 rounded-3xl"
           >
             <AccordionTrigger
               className="rounded-full bg-[#19123c] py-4 px-0 text-white font-medium"
