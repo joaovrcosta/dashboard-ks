@@ -59,11 +59,31 @@ export function GenderChart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+        <div className="flex flex-col items-center gap-2 font-medium leading-none w-full text-white text-lg space-y-2 mt-3">
+          <div className="flex w-full items-center justify-between">
+            <div>
+              <p>Mulheres:</p>
+            </div>
+            <div>
+              <p>45%</p>
+            </div>
+          </div>
+          <div className="flex w-full items-center justify-between">
+            <div>
+              <p>Homens:</p>
+            </div>
+            <div>
+              <p>50%</p>
+            </div>
+          </div>
+          <div className="flex w-full items-center justify-between">
+            <div>
+              <p>Não informado:</p>
+            </div>
+            <div>
+              <p>5%</p>
+            </div>
+          </div>
         </div>
       </CardFooter>
     </Card>
