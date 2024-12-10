@@ -46,14 +46,14 @@ export default function DashboardPage() {
                 className="bg-card-gradient rounded-3xl"
               ></DashboardCard>
             </div>
-            <div className="lg:hidden xl:hidden md:hidden block">
+            <div className="lg:hidden xl:hidden md:hidden block space-y-5">
               <DashboardCard
                 titles={[{ label: "CMV/Pagos/Mês", value: "R$ 150.000,00" }]}
                 className="bg-card-gradient rounded-2xl"
               ></DashboardCard>
               <div className="w-full flex space-x-8">
                 <DashboardCard
-                  titles={[{ label: "CMV/Pagos/Mês", value: "1500" }]}
+                  titles={[{ label: "CMV/Pagos/Mês", value: "1502" }]}
                   className="bg-card-gradient rounded-2xl w-full"
                 ></DashboardCard>
                 <DashboardCard
@@ -91,16 +91,17 @@ export default function DashboardPage() {
               ></DashboardCard>
             </Card>
           </div>
-          <div className="flex items-center space-x-8 bg-[#19123c] p-4 rounded-2xl">
+          <div className="hidden md:flex items-center space-x-8 bg-[#19123c] p-4 rounded-2xl">
             <DashboardCard
               titles={[{ label: "CMV/Pagos/Mês", value: "R$ 150.000,00" }]}
               className="bg-card-gradient rounded-2xl w-full"
             ></DashboardCard>
 
             <DashboardCard
-              titles={[{ label: "CMV/Pagos/Mês", value: "1500" }]}
+              titles={[{ label: "CMV/Pagos/Mês", value: "1505" }]}
               className="bg-card-gradient rounded-2xl w-full"
             ></DashboardCard>
+
             <DashboardCard
               titles={[{ label: "CMV/Pagos/Mês", value: "R$ 266,67" }]}
               className="bg-card-gradient rounded-2xl w-full"
