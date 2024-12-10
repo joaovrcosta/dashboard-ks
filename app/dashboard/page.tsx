@@ -18,7 +18,7 @@ import { TopProducts } from "@/components/top-products";
 export default function DashboardPage() {
   return (
     <div className="flex items-center justify-center mb-24">
-      <div className="px-2 max-w-[1720px] w-full">
+      <div className="xl:px-8 md:px-8 lg:px-8 px-4 max-w-[1720px] w-full">
         <DataFilter />
         <Card
           className="bg-[#19123C] rounded-2xl p-4 lg:hidden xl:hidden md:hidden block"
@@ -49,21 +49,21 @@ export default function DashboardPage() {
             <div className="lg:hidden xl:hidden md:hidden block space-y-5">
               <DashboardCard
                 titles={[{ label: "CMV/Pagos/Mês", value: "R$ 150.000,00" }]}
-                className="bg-card-gradient rounded-2xl"
+                className="bg-card-gradient rounded-3xl"
               ></DashboardCard>
               <div className="w-full flex space-x-8">
                 <DashboardCard
                   titles={[{ label: "CMV/Pagos/Mês", value: "1502" }]}
-                  className="bg-card-gradient rounded-2xl w-full"
+                  className="bg-card-gradient rounded-3xl w-full"
                 ></DashboardCard>
                 <DashboardCard
                   titles={[{ label: "CMV/Pagos/Mês", value: "R$ 266,67" }]}
-                  className="bg-card-gradient rounded-2xl w-full"
+                  className="bg-card-gradient rounded-3xl w-full"
                 ></DashboardCard>
               </div>
               <DashboardCard
                 titles={[{ label: "Total Recompra", value: "350" }]}
-                className="bg-card-gradient rounded-2xl w-full"
+                className="bg-card-gradient rounded-3xl w-full"
               ></DashboardCard>
             </div>
           </div>
@@ -94,22 +94,22 @@ export default function DashboardPage() {
           <div className="hidden md:flex items-center space-x-8 bg-[#19123c] p-4 rounded-2xl">
             <DashboardCard
               titles={[{ label: "CMV/Pagos/Mês", value: "R$ 150.000,00" }]}
-              className="bg-card-gradient rounded-2xl w-full"
+              className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
               titles={[{ label: "CMV/Pagos/Mês", value: "1505" }]}
-              className="bg-card-gradient rounded-2xl w-full"
+              className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
               titles={[{ label: "CMV/Pagos/Mês", value: "R$ 266,67" }]}
-              className="bg-card-gradient rounded-2xl w-full"
+              className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
               titles={[{ label: "Total Recompra", value: "350" }]}
-              className="bg-card-gradient rounded-2xl w-full"
+              className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
           </div>
         </div>
@@ -183,10 +183,16 @@ export default function DashboardPage() {
             </Card>
           </div>
           <div className="flex space-x-8">
-            <Card className="w-full bg-[#19123c] rounded-2xl">
+            <Card
+              className="w-full bg-[#19123c] rounded-2xl"
+              title="Sistemas Operacionais - Mobile"
+            >
               <OSChart />
             </Card>
-            <Card className="w-full bg-[#19123c] rounded-2xl">
+            <Card
+              className="w-full bg-[#19123c] rounded-2xl"
+              title="Top 5 - Cupons"
+            >
               <div className="mt-8">
                 <LowStockItem />
               </div>

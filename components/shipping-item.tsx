@@ -3,8 +3,8 @@ export function ShippingItem() {
     <div className={`bg-white rounded-lg p-3 bg-card-gradient`}>
       <div className="p-2 border-b border-gray-500 flex items-center w-full justify-between">
         <div>
-          <h2 className="text-white text-xs font-normal text-center">
-            Valor frete:
+          <h2 className="text-white lg:text-lg xl:text-lg md:text-lg text-xs font-normal text-center">
+            Valor frete grátis:
           </h2>
         </div>
         <div>
@@ -16,8 +16,8 @@ export function ShippingItem() {
 
       <div className="p-2  border-gray-500 flex items-center w-full justify-between">
         <div>
-          <h2 className="text-white text-xs font-normal text-center">
-            Valor entrega :
+          <h2 className="text-white font-normal text-center  lg:text-lg xl:text-lg md:text-lg text-xs">
+            Total de frete pago:
           </h2>
         </div>
         <div>

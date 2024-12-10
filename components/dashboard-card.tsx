@@ -9,7 +9,7 @@ export function DashboardCard({
   titles,
   children,
   className,
-  itemClassName, // Adiciona itemClassName
+  itemClassName,
 }: CardProps) {
   return (
     <div
@@ -24,12 +24,12 @@ export function DashboardCard({
             index === titles.length - 1
               ? "border-none"
               : "lg:border-r lg:border-b-0 xl:border-r xl:border-b-0 md:border-b-0 md:border-r border-b border-gray-500"
-          } flex-1 ${itemClassName ?? ""}`} // Aplica a classe opcional aqui
+          } flex-1 ${itemClassName ?? ""}`}
         >
-          <h2 className="text-white text-xs font-normal text-center">
+          <h2 className="text-white lg:text-md xl:text-md md:text-md text-xs font-normal text-center">
             {item.label}
           </h2>
-          <p className="text-lg font-normal text-gray-200 text-center">
+          <p className="text-xl xl:text-2xl lg:text-2xl md:text-2xl font-normal text-gray-200 text-center">
             {item.value}
           </p>
         </div>
