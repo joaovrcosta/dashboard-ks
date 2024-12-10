@@ -17,6 +17,10 @@ const chartData = [
   { date: "xx/xx/xx", desktop: 22000, mobile: 14000, tablet: 8000 },
   { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
   { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
+  { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
+  { date: "xx/xx/xx", desktop: 22000, mobile: 14000, tablet: 8000 },
+  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
+  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
 ];
 
 export function MultipleChart() {
@@ -29,7 +33,11 @@ export function MultipleChart() {
             <p className="text-xs font-normal">Gerados</p>
           </div>
 
-          <div className="flex items-center justify-around ml-8 w-full lg:gap-3 xl:gap-3 md:gap-3 gap-12">
+          <div className="flex items-center justify-around lg:ml-6 xl:ml-6 md:ml-4 ml-11 w-full lg:gap-3 xl:gap-3 md:gap-3 gap-12">
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
+            <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
             <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
             <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
             <InfoCard value_1={"R$16.044,06"} value_2={"R$16.044,06"} />
@@ -42,6 +50,7 @@ export function MultipleChart() {
             <BarChart
               data={chartData}
               margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
+              barSize={20}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#332a63" />
 

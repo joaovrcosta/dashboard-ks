@@ -33,7 +33,7 @@ export function PaymentTypeChart() {
   return (
     <Card className="bg-transparent border-none p-0">
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className="max-h-[120px] w-full">
           <BarChart
             accessibilityLayer
             data={chartData}
@@ -54,7 +54,7 @@ export function PaymentTypeChart() {
               dataKey="month"
               type="category"
               tickLine={false}
-              tickMargin={10}
+              tickMargin={5}
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />

@@ -9,7 +9,7 @@ import { accordionData } from "@/app/_mocks/resources";
 
 export function Resources() {
   return (
-    <div className="px-2 mt-3">
+    <div className="px-2 mt-3 lg:hidden xl:hidden md:hidden block">
       <Accordion type="single" collapsible className="space-y-3">
         {accordionData.map(({ id, title, icon, content }) => (
           <AccordionItem

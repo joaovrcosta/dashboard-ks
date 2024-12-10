@@ -33,7 +33,7 @@ export function OSChart() {
   return (
     <Card className="bg-transparent border-none p-0">
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className="max-h-[120px] w-full">
           <BarChart
             accessibilityLayer
             data={chartData}
