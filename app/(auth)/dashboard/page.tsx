@@ -21,10 +21,6 @@ import { TopProducts } from "@/components/top-products";
 export default function DashboardPage() {
   const { selectedDate, data, setSelectedDate } = useDashboardStore();
 
-  console.log(data);
-
-  console.log(selectedDate);
-
   return (
     <div className="flex items-center justify-center mb-24">
       <div className="xl:px-8 md:px-8 lg:px-8 px-4 max-w-[1720px] w-full">
