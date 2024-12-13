@@ -5,12 +5,7 @@ interface CardProps {
   itemClassName?: string; // Classe opcional para os itens
 }
 
-export function DashboardCard({
-  titles,
-  children,
-  className,
-  itemClassName,
-}: CardProps) {
+export function DashboardCard({ titles, className, itemClassName }: CardProps) {
   return (
     <div
       className={`bg-white rounded flex flex-col xl:flex-row lg:flex-row md:flex-row ${

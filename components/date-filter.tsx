@@ -1,6 +1,4 @@
-import React from "react";
-
-export function DataFilter({ selectedDate, onDateChange }: any) {
+export function DataFilter({ _, onDateChange }: any) {
   const calculateDate = (days: any) => {
     const currentDate = new Date();
     currentDate.setDate(currentDate.getDate() - days);

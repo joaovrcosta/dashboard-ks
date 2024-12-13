@@ -1,4 +1,3 @@
-import { InfoCard } from "./info-card";
 import { ItemCard } from "./item-card";
 import { ScrollArea } from "./ui/scroll-area";
 

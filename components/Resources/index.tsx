@@ -1,4 +1,3 @@
-import { Boxes, Filter, Package } from "lucide-react";
 import {
   Accordion,
   AccordionContent,

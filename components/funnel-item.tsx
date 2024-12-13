@@ -1,4 +1,3 @@
-import { Card } from "./card";
 import { DashboardCard } from "./dashboard-card";
 
 export function FunnelItem() {
