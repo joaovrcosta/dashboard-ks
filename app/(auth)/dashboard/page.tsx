@@ -1,3 +1,6 @@
+"use client";
+
+import { useDashboardStore } from "@/app/_stores/dateFilter";
 import { Card } from "@/components/card";
 import { DevicesChart } from "@/components/Charts/devices-chart";
 import { GenderChart } from "@/components/Charts/gender-chart";
@@ -16,10 +19,20 @@ import { ShippingItem } from "@/components/shipping-item";
 import { TopProducts } from "@/components/top-products";
 
 export default function DashboardPage() {
+  const { selectedDate, data, setSelectedDate } = useDashboardStore();
+
+  console.log(data);
+
+  console.log(selectedDate);
+
   return (
     <div className="flex items-center justify-center mb-24">
       <div className="xl:px-8 md:px-8 lg:px-8 px-4 max-w-[1720px] w-full">
-        <DataFilter />
+        <DataFilter
+          selectedDate={selectedDate}
+          onDateChange={(newDate) => setSelectedDate(newDate)}
+        />
+
         <Card
           className="bg-[#19123C] rounded-2xl p-4 lg:hidden xl:hidden md:hidden block"
           title="Faturamento"
@@ -29,22 +42,34 @@ export default function DashboardPage() {
               <div className="lg:hidden xl:hidden md:hidden block">
                 <DashboardCard
                   titles={[
-                    { label: "Total Gerado no Mês", value: "R$ 500.000,00" },
-                    { label: "Projeção do Mês", value: "R$ 620.000,00" },
+                    {
+                      label: "Total Gerado no Mês",
+                      value: data.faturamento.totalGerado,
+                    },
+                    {
+                      label: "Projeção do Mês",
+                      value: data.faturamento.projecaoMes,
+                    },
                   ]}
                   className="bg-card-gradient rounded-3xl"
-                ></DashboardCard>
+                />
               </div>
             </div>
             <div className="lg:hidden xl:hidden md:hidden block">
               <DashboardCard
                 titles={[
-                  { label: "Total Pagos/Mês", value: "R$ 400.000,00" },
-                  { label: "Projeção mês", value: "R$ 500.000,00" },
-                  { label: "Mark Up", value: "XX" },
+                  {
+                    label: "Total Pagos/Mês",
+                    value: data.pagamentos.totalPago,
+                  },
+                  {
+                    label: "Projeção do Mês",
+                    value: data.pagamentos.projecaoMes,
+                  },
+                  { label: "Mark Up", value: data.pagamentos.markUp },
                 ]}
                 className="bg-card-gradient rounded-3xl"
-              ></DashboardCard>
+              />
             </div>
             <div className="lg:hidden xl:hidden md:hidden block space-y-5">
               <DashboardCard
@@ -53,18 +78,22 @@ export default function DashboardPage() {
               ></DashboardCard>
               <div className="w-full flex space-x-8">
                 <DashboardCard
-                  titles={[{ label: "CMV/Pagos/Mês", value: "1502" }]}
-                  className="bg-card-gradient rounded-3xl w-full"
-                ></DashboardCard>
+                  titles={[
+                    { label: "CMV/Pagos/Mês", value: data.cmv.valorPago },
+                  ]}
+                  className="bg-card-gradient rounded-3xl"
+                />
                 <DashboardCard
-                  titles={[{ label: "CMV/Pagos/Mês", value: "R$ 266,67" }]}
-                  className="bg-card-gradient rounded-3xl w-full"
-                ></DashboardCard>
+                  titles={[{ label: "Quantidade", value: data.cmv.quantidade }]}
+                  className="bg-card-gradient rounded-3xl"
+                />
               </div>
               <DashboardCard
-                titles={[{ label: "Total Recompra", value: "350" }]}
-                className="bg-card-gradient rounded-3xl w-full"
-              ></DashboardCard>
+                titles={[
+                  { label: "Valor por Item", value: data.cmv.valorPorItem },
+                ]}
+                className="bg-card-gradient rounded-3xl"
+              />
             </div>
           </div>
         </Card>
@@ -74,43 +103,54 @@ export default function DashboardPage() {
             <Card className="lg:block xl:block md:block hidden w-full bg-[#19123c] rounded-2xl">
               <DashboardCard
                 titles={[
-                  { label: "Total Gerado no Mês", value: "R$ 500.000,00" },
-                  { label: "Projeção do Mês", value: "R$ 620.000,00" },
+                  {
+                    label: "Total Gerado no Mês",
+                    value: data.faturamento.totalGerado,
+                  },
+                  {
+                    label: "Projeção do Mês",
+                    value: data.faturamento.projecaoMes,
+                  },
                 ]}
                 className="bg-card-gradient rounded-3xl"
-              ></DashboardCard>
+              />
             </Card>
             <Card className="lg:block xl:block md:block hidden w-full bg-[#19123c] rounded-2xl">
               <DashboardCard
                 titles={[
-                  { label: "Total Pagos/Mês", value: "R$ 400.000,00" },
-                  { label: "Projeção mês", value: "R$ 500.000,00" },
-                  { label: "Mark Up", value: "XX" },
+                  {
+                    label: "Total Pagos/Mês",
+                    value: data.pagamentos.totalPago,
+                  },
+                  { label: "Projeção mês", value: data.pagamentos.projecaoMes },
+                  { label: "Mark Up", value: data.pagamentos.markUp },
                 ]}
                 className="bg-card-gradient rounded-3xl"
-              ></DashboardCard>
+              />
             </Card>
           </div>
           <div className="hidden md:flex items-center space-x-8 bg-[#19123c] p-4 rounded-2xl">
             <DashboardCard
-              titles={[{ label: "CMV/Pagos/Mês", value: "R$ 150.000,00" }]}
+              titles={[{ label: "CMV/Pagos/Mês", value: data.cmv.month }]}
+              className="bg-card-gradient rounded-3xl w-full"
+            />
+
+            <DashboardCard
+              titles={[{ label: "Total pedidos", value: data.cmv.quantidade }]}
               className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
-              titles={[{ label: "CMV/Pagos/Mês", value: "1505" }]}
+              titles={[{ label: "Ticket Médio", value: data.cmv.valorPorItem }]}
               className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
-              titles={[{ label: "CMV/Pagos/Mês", value: "R$ 266,67" }]}
+              titles={[
+                { label: "Total Recompra", value: data.repurchase?.total },
+              ]}
               className="bg-card-gradient rounded-3xl w-full"
-            ></DashboardCard>
-
-            <DashboardCard
-              titles={[{ label: "Total Recompra", value: "350" }]}
-              className="bg-card-gradient rounded-3xl w-full"
-            ></DashboardCard>
+            />
           </div>
         </div>
         <MultipleChart />

@@ -1,18 +1,38 @@
-import { Button } from "./ui/button";
+import React from "react";
 
-export function DataFilter() {
+export function DataFilter({ selectedDate, onDateChange }) {
+  const calculateDate = (days) => {
+    const currentDate = new Date();
+    currentDate.setDate(currentDate.getDate() - days);
+    return currentDate;
+  };
+
   return (
-    <div className="w-full">
-      <div className="flex py-5 w-full space-x-3">
-        {["7 dias", "15 dias", "Mês", "Ano"].map((label) => (
-          <Button
-            key={label}
-            className="relative rounded-full w-[80px] text-white overflow-hidden bg-gradient-to-r from-purple-600 to-blue-500 hover:animate-gradient-move bg-[length:200%_200%]"
-          >
-            {label}
-          </Button>
-        ))}
-      </div>
+    <div className="mb-4 flex space-x-4 items-center">
+      <button
+        onClick={() => onDateChange(new Date())}
+        className="p-2 bg-gray-800 text-white rounded hover:bg-gray-700"
+      >
+        Hoje
+      </button>
+      <button
+        onClick={() => onDateChange(calculateDate(7))}
+        className="p-2 bg-gray-800 text-white rounded hover:bg-gray-700"
+      >
+        7 Dias
+      </button>
+      <button
+        onClick={() => onDateChange(calculateDate(15))}
+        className="p-2 bg-gray-800 text-white rounded hover:bg-gray-700"
+      >
+        15 Dias
+      </button>
+      <button
+        onClick={() => onDateChange(calculateDate(30))}
+        className="p-2 bg-gray-800 text-white rounded hover:bg-gray-700"
+      >
+        30 Dias
+      </button>
     </div>
   );
 }
