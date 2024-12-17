@@ -1,26 +1,15 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Pie, PieChart } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-];
+import { useDateStore } from "@/app/_stores/dateStore";
 
 const chartConfig = {
   male: {
@@ -37,6 +26,8 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function GenderChart() {
+  const { data } = useDateStore();
+
   return (
     <Card className="flex flex-col bg-transparent border-none">
       <CardContent className="flex-1 pb-0">
@@ -50,7 +41,7 @@ export function GenderChart() {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={chartData}
+              data={data[0]?.gender}
               dataKey="visitors"
               nameKey="browser"
               innerRadius={60}

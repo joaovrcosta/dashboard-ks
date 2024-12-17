@@ -1,26 +1,15 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", desktop: 100 },
-  { month: "February", desktop: 150 },
-];
+import { useDateStore } from "@/app/_stores/dateStore";
 
 const chartConfig = {
   desktop: {
@@ -30,13 +19,15 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function OSChart() {
+  const { data } = useDateStore();
+
   return (
     <Card className="bg-transparent border-none p-0">
       <CardContent>
         <ChartContainer config={chartConfig} className="max-h-[120px] w-full">
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={data[0]?.os}
             layout="vertical"
             barSize={20}
             margin={{

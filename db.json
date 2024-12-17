@@ -68,7 +68,61 @@
         "addCart": 32,
         "checkout": 28,
         "purchase": 2
-      }
+      },
+      "paymentType": [
+        { "month": "Debit", "desktop": 100 },
+        { "month": "Credit", "desktop": 150 }
+      ],
+      "registrations": {
+        "customerRegistrations": 5,
+        "totalRegistrations": 10
+      },
+      "top10States": [
+        { "month": "SP", "desktop": 5 },
+        { "month": "MT", "desktop": 10 },
+        { "month": "PB", "desktop": 15 },
+        { "month": "MG", "desktop": 20 },
+        { "month": "MS", "desktop": 25 },
+        { "month": "AM", "desktop": 30 },
+        { "month": "RJ", "desktop": 35 },
+        { "month": "RS", "desktop": 40 },
+        { "month": "CR", "desktop": 45 },
+        { "month": "ST", "desktop": 50 }
+      ],
+      "top10Ages": [
+        { "month": "30", "desktop": 100 },
+        { "month": "23", "desktop": 70 },
+        { "month": "25", "desktop": 40 },
+        { "month": "31", "desktop": 32 },
+        { "month": "18", "desktop": 31 },
+        { "month": "21", "desktop": 34 },
+        { "month": "22", "desktop": 43 },
+        { "month": "24", "desktop": 31 },
+        { "month": "36", "desktop": 25 },
+        { "month": "38", "desktop": 12 }
+      ],
+
+      "gender": [
+        { "browser": "Homens", "visitors": 275, "fill": "var(--color-chrome)" },
+        {
+          "browser": "Mulheres",
+          "visitors": 200,
+          "fill": "var(--color-safari)"
+        }
+      ],
+      "devices": [
+        { "browser": "Mobile", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "Mobile", "visitors": 200, "fill": "var(--color-safari)" },
+        {
+          "browser": "Mobile",
+          "visitors": 187,
+          "fill": "var(--color-firefox)"
+        }
+      ],
+      "os": [
+        { "month": "Android", "desktop": 100 },
+        { "month": "IOS", "desktop": 150 }
+      ]
     },
     {
       "id": 2,
@@ -138,7 +192,56 @@
         "addCart": 30,
         "checkout": 20,
         "purchase": 10
-      }
+      },
+      "paymentType": [
+        { "month": "Debit", "desktop": 350 },
+        { "month": "Credit", "desktop": 300 }
+      ],
+      "registrations": {
+        "customerRegistrations": 10,
+        "totalRegistrations": 15
+      },
+      "top10States": [
+        { "month": "SP", "desktop": 10 },
+        { "month": "MT", "desktop": 18 },
+        { "month": "PB", "desktop": 24 },
+        { "month": "MG", "desktop": 28 },
+        { "month": "MS", "desktop": 100 },
+        { "month": "AM", "desktop": 68 },
+        { "month": "RJ", "desktop": 27 },
+        { "month": "RS", "desktop": 83 },
+        { "month": "CR", "desktop": 99 },
+        { "month": "ST", "desktop": 34 }
+      ],
+      "top10Ages": [
+        { "month": "30", "desktop": 100 },
+        { "month": "23", "desktop": 70 },
+        { "month": "25", "desktop": 40 },
+        { "month": "31", "desktop": 32 },
+        { "month": "18", "desktop": 31 },
+        { "month": "21", "desktop": 34 },
+        { "month": "22", "desktop": 43 },
+        { "month": "24", "desktop": 31 },
+        { "month": "36", "desktop": 25 },
+        { "month": "38", "desktop": 12 }
+      ],
+      "gender": [
+        { "browser": "womens", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "mens", "visitors": 200, "fill": "var(--color-safari)" }
+      ],
+      "devices": [
+        { "browser": "chrome", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "safari", "visitors": 200, "fill": "var(--color-safari)" },
+        {
+          "browser": "firefox",
+          "visitors": 187,
+          "fill": "var(--color-firefox)"
+        }
+      ],
+      "os": [
+        { "month": "Android", "desktop": 150 },
+        { "month": "IOS", "desktop": 200 }
+      ]
     },
     {
       "id": 3,
@@ -208,7 +311,56 @@
         "addCart": 30,
         "checkout": 20,
         "purchase": 10
-      }
+      },
+      "paymentType": [
+        { "month": "Debit", "desktop": 400 },
+        { "month": "Credit", "desktop": 350 }
+      ],
+      "registrations": {
+        "customerRegistrations": 15,
+        "totalRegistrations": 20
+      },
+      "top10States": [
+        { "month": "SP", "desktop": 100 },
+        { "month": "MT", "desktop": 70 },
+        { "month": "PB", "desktop": 40 },
+        { "month": "MG", "desktop": 32 },
+        { "month": "MS", "desktop": 31 },
+        { "month": "AM", "desktop": 34 },
+        { "month": "RJ", "desktop": 43 },
+        { "month": "RS", "desktop": 31 },
+        { "month": "CR", "desktop": 25 },
+        { "month": "ST", "desktop": 12 }
+      ],
+      "top10Ages": [
+        { "month": "30", "desktop": 100 },
+        { "month": "23", "desktop": 70 },
+        { "month": "25", "desktop": 40 },
+        { "month": "31", "desktop": 32 },
+        { "month": "18", "desktop": 31 },
+        { "month": "21", "desktop": 34 },
+        { "month": "22", "desktop": 43 },
+        { "month": "24", "desktop": 31 },
+        { "month": "36", "desktop": 25 },
+        { "month": "38", "desktop": 12 }
+      ],
+      "gender": [
+        { "browser": "womens", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "mens", "visitors": 200, "fill": "var(--color-safari)" }
+      ],
+      "devices": [
+        { "browser": "chrome", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "safari", "visitors": 200, "fill": "var(--color-safari)" },
+        {
+          "browser": "firefox",
+          "visitors": 187,
+          "fill": "var(--color-firefox)"
+        }
+      ],
+      "os": [
+        { "month": "Android", "desktop": 200 },
+        { "month": "IOS", "desktop": 250 }
+      ]
     },
     {
       "id": 4,
@@ -278,7 +430,56 @@
         "addCart": 30,
         "checkout": 20,
         "purchase": 10
-      }
+      },
+      "paymentType": [
+        { "month": "Debit", "desktop": 500 },
+        { "month": "Credit", "desktop": 450 }
+      ],
+      "registrations": {
+        "customerRegistrations": 20,
+        "totalRegistrations": 25
+      },
+      "top10States": [
+        { "month": "SP", "desktop": 25 },
+        { "month": "MT", "desktop": 74 },
+        { "month": "PB", "desktop": 123 },
+        { "month": "MG", "desktop": 84 },
+        { "month": "MS", "desktop": 11 },
+        { "month": "AM", "desktop": 89 },
+        { "month": "RJ", "desktop": 47 },
+        { "month": "RS", "desktop": 12 },
+        { "month": "CR", "desktop": 37 },
+        { "month": "ST", "desktop": 12 }
+      ],
+      "top10Ages": [
+        { "month": "30", "desktop": 100 },
+        { "month": "23", "desktop": 70 },
+        { "month": "25", "desktop": 40 },
+        { "month": "31", "desktop": 32 },
+        { "month": "18", "desktop": 31 },
+        { "month": "21", "desktop": 34 },
+        { "month": "22", "desktop": 43 },
+        { "month": "24", "desktop": 31 },
+        { "month": "36", "desktop": 25 },
+        { "month": "38", "desktop": 12 }
+      ],
+      "gender": [
+        { "browser": "womens", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "mens", "visitors": 200, "fill": "var(--color-safari)" }
+      ],
+      "devices": [
+        { "browser": "chrome", "visitors": 275, "fill": "var(--color-chrome)" },
+        { "browser": "safari", "visitors": 200, "fill": "var(--color-safari)" },
+        {
+          "browser": "firefox",
+          "visitors": 187,
+          "fill": "var(--color-firefox)"
+        }
+      ],
+      "os": [
+        { "month": "Android", "desktop": 250 },
+        { "month": "IOS", "desktop": 300 }
+      ]
     }
   ]
 }

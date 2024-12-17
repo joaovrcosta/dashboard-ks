@@ -1,34 +1,15 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "SP", desktop: 100 },
-  { month: "MT", desktop: 70 },
-  { month: "PB", desktop: 40 },
-  { month: "MG", desktop: 32 },
-  { month: "MS", desktop: 31 },
-  { month: "AM", desktop: 34 },
-  { month: "RJ", desktop: 43 },
-  { month: "RS", desktop: 31 },
-  { month: "CR", desktop: 25 },
-  { month: "ST", desktop: 12 },
-];
+import { useDateStore } from "@/app/_stores/dateStore";
 
 const chartConfig = {
   desktop: {
@@ -38,13 +19,15 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function Top10Ages() {
+  const { data } = useDateStore();
+
   return (
     <Card className="bg-transparent border-none p-0">
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={data[0]?.top10Ages}
             layout="vertical"
             barSize={20}
             margin={{

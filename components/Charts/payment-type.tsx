@@ -17,10 +17,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-const chartData = [
-  { month: "January", desktop: 100 },
-  { month: "February", desktop: 150 },
-];
+import { useDateStore } from "@/app/_stores/dateStore";
 
 const chartConfig = {
   desktop: {
@@ -30,13 +27,15 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function PaymentTypeChart() {
+  const { data } = useDateStore();
+
   return (
     <Card className="bg-transparent border-none p-0">
       <CardContent>
         <ChartContainer config={chartConfig} className="max-h-[120px] w-full">
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={data[0]?.paymentType}
             layout="vertical"
             barSize={20}
             margin={{

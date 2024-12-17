@@ -18,4 +18,17 @@ export type ProjectionData = {
     checkout: number;
     purchase: number;
   };
+  paymentType: {
+    credit: number;
+    debit: number;
+  };
+  registrations: {
+    customerRegistrations: number;
+    totalRegistrations: number;
+  };
+  top10States: any;
+  top10Ages: any;
+  gender: any;
+  devices: any;
+  os: any;
 };

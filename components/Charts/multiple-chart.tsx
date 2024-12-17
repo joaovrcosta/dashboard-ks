@@ -13,17 +13,6 @@ import { Card } from "../card";
 import { InfoCard } from "../info-card";
 import { useDateStore } from "@/app/_stores/dateStore";
 
-const chartData = [
-  { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
-  { date: "xx/xx/xx", desktop: 22000, mobile: 14000, tablet: 8000 },
-  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
-  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
-  { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
-  { date: "xx/xx/xx", desktop: 22000, mobile: 14000, tablet: 8000 },
-  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
-  { date: "xx/xx/xx", desktop: 26000, mobile: 13000, tablet: 7000 },
-];
-
 export function MultipleChart() {
   const { data } = useDateStore();
 
