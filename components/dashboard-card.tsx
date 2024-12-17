@@ -2,7 +2,7 @@ interface CardProps {
   titles?: { label: string; value: React.ReactNode }[];
   children?: React.ReactNode;
   className?: string;
-  itemClassName?: string; // Classe opcional para os itens
+  itemClassName?: string;
 }
 
 export function DashboardCard({ titles, className, itemClassName }: CardProps) {

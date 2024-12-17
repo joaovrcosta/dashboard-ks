@@ -1,5 +1,3 @@
-// mockData.ts
-
 export const mockData = {
   "7 dias": [
     { label: "Total Gerado", value: "R$ 150.000,00" },
