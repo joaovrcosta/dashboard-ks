@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import { Card } from "../card";
 import { InfoCard } from "../info-card";
+import { useDateStore } from "@/app/_stores/dateStore";
 
 const chartData = [
   { date: "xx/xx/xx", desktop: 24000, mobile: 12000, tablet: 6000 },
@@ -24,6 +25,8 @@ const chartData = [
 ];
 
 export function MultipleChart() {
+  const { data } = useDateStore();
+
   return (
     <Card title="Faturamento Diário" className="mt-4 px-2">
       <div className="flex flex-col items-center w-full overflow-x-auto space-y-4">
@@ -48,7 +51,7 @@ export function MultipleChart() {
         <div className="bg-transparent rounded-lg w-full min-w-[600px] ml-64 lg:ml-0 xl:ml-0 md:ml-0">
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
-              data={chartData}
+              data={data[0]?.billing}
               margin={{ top: 20, right: 20, left: 0, bottom: 20 }}
               barSize={20}
             >

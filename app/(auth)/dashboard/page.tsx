@@ -1,6 +1,7 @@
 "use client";
 
-import { useDashboardStore } from "@/app/_stores/dateFilter";
+import { useDateStore } from "@/app/_stores/dateStore";
+import { formatCurrencyBRL } from "@/app/_utils/formatCurrencyBRL";
 import { Card } from "@/components/card";
 import { DevicesChart } from "@/components/Charts/devices-chart";
 import { GenderChart } from "@/components/Charts/gender-chart";
@@ -19,15 +20,12 @@ import { ShippingItem } from "@/components/shipping-item";
 import { TopProducts } from "@/components/top-products";
 
 export default function DashboardPage() {
-  const { selectedDate, data, setSelectedDate } = useDashboardStore();
+  const { data } = useDateStore();
 
   return (
     <div className="flex items-center justify-center mb-24">
       <div className="xl:px-8 md:px-8 lg:px-8 px-4 max-w-[1720px] w-full">
-        <DataFilter
-          selectedDate={selectedDate}
-          onDateChange={(newDate) => setSelectedDate(newDate)}
-        />
+        <DataFilter />
 
         <Card
           className="bg-[#19123C] rounded-2xl p-4 lg:hidden xl:hidden md:hidden block"
@@ -40,11 +38,11 @@ export default function DashboardPage() {
                   titles={[
                     {
                       label: "Total Gerado no Mês",
-                      value: data.faturamento.totalGerado,
+                      value: formatCurrencyBRL(data[0]?.monthTotal),
                     },
                     {
                       label: "Projeção do Mês",
-                      value: data.faturamento.projecaoMes,
+                      value: data[0]?.monthProjection,
                     },
                   ]}
                   className="bg-card-gradient rounded-3xl"
@@ -56,13 +54,13 @@ export default function DashboardPage() {
                 titles={[
                   {
                     label: "Total Pagos/Mês",
-                    value: data.pagamentos.totalPago,
+                    value: data[0]?.payed,
                   },
                   {
                     label: "Projeção do Mês",
-                    value: data.pagamentos.projecaoMes,
+                    value: data[0]?.payedProjection,
                   },
-                  { label: "Mark Up", value: data.pagamentos.markUp },
+                  { label: "Mark Up", value: data[0]?.markUp },
                 ]}
                 className="bg-card-gradient rounded-3xl"
               />
@@ -75,18 +73,20 @@ export default function DashboardPage() {
               <div className="w-full flex space-x-8">
                 <DashboardCard
                   titles={[
-                    { label: "CMV/Pagos/Mês", value: data.cmv.valorPago },
+                    { label: "CMV/Pagos/Mês", value: data[0]?.cmvMonth },
                   ]}
                   className="bg-card-gradient rounded-3xl"
                 />
                 <DashboardCard
-                  titles={[{ label: "Quantidade", value: data.cmv.quantidade }]}
+                  titles={[
+                    { label: "Quantidade", value: data[0]?.totalOrders },
+                  ]}
                   className="bg-card-gradient rounded-3xl"
                 />
               </div>
               <DashboardCard
                 titles={[
-                  { label: "Valor por Item", value: data.cmv.valorPorItem },
+                  { label: "Valor por Item", value: data[0]?.repurchaseRate },
                 ]}
                 className="bg-card-gradient rounded-3xl"
               />
@@ -101,11 +101,17 @@ export default function DashboardPage() {
                 titles={[
                   {
                     label: "Total Gerado no Mês",
-                    value: data.faturamento.totalGerado,
+                    value:
+                      data[0]?.monthTotal != null
+                        ? formatCurrencyBRL(data[0]?.monthTotal)
+                        : null,
                   },
                   {
                     label: "Projeção do Mês",
-                    value: data.faturamento.projecaoMes,
+                    value:
+                      data[0]?.monthTotal != null
+                        ? formatCurrencyBRL(data[0]?.monthProjection)
+                        : null,
                   },
                 ]}
                 className="bg-card-gradient rounded-3xl"
@@ -116,10 +122,10 @@ export default function DashboardPage() {
                 titles={[
                   {
                     label: "Total Pagos/Mês",
-                    value: data.pagamentos.totalPago,
+                    value: data[0]?.payed,
                   },
-                  { label: "Projeção mês", value: data.pagamentos.projecaoMes },
-                  { label: "Mark Up", value: data.pagamentos.markUp },
+                  { label: "Projeção mês", value: data[0]?.payedProjection },
+                  { label: "Mark Up", value: data[0]?.markUp },
                 ]}
                 className="bg-card-gradient rounded-3xl"
               />
@@ -127,23 +133,23 @@ export default function DashboardPage() {
           </div>
           <div className="hidden md:flex items-center space-x-8 bg-[#19123c] p-4 rounded-2xl">
             <DashboardCard
-              titles={[{ label: "CMV/Pagos/Mês", value: data.cmv.month }]}
+              titles={[{ label: "CMV/Pagos/Mês", value: data[0]?.cmvMonth }]}
               className="bg-card-gradient rounded-3xl w-full"
             />
 
             <DashboardCard
-              titles={[{ label: "Total pedidos", value: data.cmv.quantidade }]}
+              titles={[{ label: "Total pedidos", value: data[0]?.totalOrders }]}
               className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
-              titles={[{ label: "Ticket Médio", value: data.cmv.valorPorItem }]}
+              titles={[{ label: "Ticket Médio", value: data[0]?.ticketMedio }]}
               className="bg-card-gradient rounded-3xl w-full"
             ></DashboardCard>
 
             <DashboardCard
               titles={[
-                { label: "Total Recompra", value: data.repurchase?.total },
+                { label: "Total Recompra", value: data[0]?.repurchaseRate },
               ]}
               className="bg-card-gradient rounded-3xl w-full"
             />

@@ -1,0 +1,284 @@
+{
+  "projection": [
+    {
+      "id": 1,
+      "date": "2024-12-16",
+      "monthTotal": 1379,
+      "monthProjection": 149200,
+      "payed": 582,
+      "payedProjection": 1000,
+      "markUp": 0.3,
+      "cmvMonth": 500,
+      "totalOrders": 2,
+      "ticketMedio": 100,
+      "repurchaseRate": 0.5,
+      "billing": [
+        {
+          "date": "2024-12-15",
+          "desktop": 2837,
+          "mobile": 3823,
+          "tablet": 183
+        },
+        {
+          "date": "2024-12-14",
+          "desktop": 22000,
+          "mobile": 12500,
+          "tablet": 7500
+        },
+        {
+          "date": "2024-12-13",
+          "desktop": 26000,
+          "mobile": 13500,
+          "tablet": 6800
+        },
+        {
+          "date": "2024-12-12",
+          "desktop": 24000,
+          "mobile": 14000,
+          "tablet": 5500
+        },
+        {
+          "date": "2024-12-11",
+          "desktop": 25000,
+          "mobile": 13000,
+          "tablet": 6200
+        },
+        {
+          "date": "2024-12-10",
+          "desktop": 26000,
+          "mobile": 12000,
+          "tablet": 7300
+        },
+        {
+          "date": "2024-12-09",
+          "desktop": 27000,
+          "mobile": 11000,
+          "tablet": 7900
+        },
+        {
+          "date": "2024-12-08",
+          "desktop": 26000,
+          "mobile": 12500,
+          "tablet": 7100
+        }
+      ],
+      "funnel": {
+        "visitors": 109,
+        "viewProduct": 67,
+        "addCart": 32,
+        "checkout": 28,
+        "purchase": 2
+      }
+    },
+    {
+      "id": 2,
+      "date": "2024-12-09",
+      "monthTotal": 158304,
+      "monthProjection": 149200,
+      "payed": 500,
+      "payedProjection": 1000,
+      "markUp": 1.5,
+      "cmvMonth": 500,
+      "totalOrders": 10,
+      "ticketMedio": 100,
+      "repurchaseRate": 1.4,
+      "billing": [
+        {
+          "date": "2024-12-01",
+          "desktop": 18303,
+          "mobile": 12000,
+          "tablet": 6000
+        },
+        {
+          "date": "2024-12-02",
+          "desktop": 19000,
+          "mobile": 15000,
+          "tablet": 8000
+        },
+        {
+          "date": "2024-12-03",
+          "desktop": 20000,
+          "mobile": 13000,
+          "tablet": 7500
+        },
+        {
+          "date": "2024-12-04",
+          "desktop": 21000,
+          "mobile": 14500,
+          "tablet": 7000
+        },
+        {
+          "date": "2024-12-05",
+          "desktop": 22000,
+          "mobile": 13500,
+          "tablet": 8000
+        },
+        {
+          "date": "2024-12-06",
+          "desktop": 25000,
+          "mobile": 14000,
+          "tablet": 8200
+        },
+        {
+          "date": "2024-12-07",
+          "desktop": 24000,
+          "mobile": 13800,
+          "tablet": 7500
+        },
+        {
+          "date": "2024-12-08",
+          "desktop": 25000,
+          "mobile": 12000,
+          "tablet": 8000
+        }
+      ],
+      "funnel": {
+        "visitors": 100,
+        "viewProduct": 50,
+        "addCart": 30,
+        "checkout": 20,
+        "purchase": 10
+      }
+    },
+    {
+      "id": 3,
+      "date": "2024-12-01",
+      "monthTotal": 184945,
+      "monthProjection": 149200,
+      "payed": 500,
+      "payedProjection": 1000,
+      "markUp": 2.4,
+      "cmvMonth": 500,
+      "totalOrders": 10,
+      "ticketMedio": 100,
+      "repurchaseRate": 1.6,
+      "billing": [
+        {
+          "date": "2024-12-01",
+          "desktop": 24000,
+          "mobile": 12000,
+          "tablet": 6000
+        },
+        {
+          "date": "2024-12-02",
+          "desktop": 22000,
+          "mobile": 13000,
+          "tablet": 8500
+        },
+        {
+          "date": "2024-12-03",
+          "desktop": 24000,
+          "mobile": 11500,
+          "tablet": 7000
+        },
+        {
+          "date": "2024-12-04",
+          "desktop": 21000,
+          "mobile": 12000,
+          "tablet": 7200
+        },
+        {
+          "date": "2024-12-05",
+          "desktop": 25000,
+          "mobile": 13000,
+          "tablet": 7600
+        },
+        {
+          "date": "2024-12-06",
+          "desktop": 27000,
+          "mobile": 12500,
+          "tablet": 6800
+        },
+        {
+          "date": "2024-12-07",
+          "desktop": 26000,
+          "mobile": 13500,
+          "tablet": 7300
+        },
+        {
+          "date": "2024-12-08",
+          "desktop": 28000,
+          "mobile": 14500,
+          "tablet": 6900
+        }
+      ],
+      "funnel": {
+        "visitors": 100,
+        "viewProduct": 50,
+        "addCart": 30,
+        "checkout": 20,
+        "purchase": 10
+      }
+    },
+    {
+      "id": 4,
+      "date": "2024-11-16",
+      "monthTotal": 294959,
+      "monthProjection": 149200,
+      "payed": 500,
+      "payedProjection": 1000,
+      "markUp": 3.0,
+      "cmvMonth": 500,
+      "totalOrders": 10,
+      "ticketMedio": 100,
+      "repurchaseRate": 2.24,
+      "billing": [
+        {
+          "date": "2024-12-01",
+          "desktop": 24000,
+          "mobile": 12000,
+          "tablet": 6000
+        },
+        {
+          "date": "2024-12-02",
+          "desktop": 21500,
+          "mobile": 13500,
+          "tablet": 7200
+        },
+        {
+          "date": "2024-12-03",
+          "desktop": 22500,
+          "mobile": 14000,
+          "tablet": 7500
+        },
+        {
+          "date": "2024-12-04",
+          "desktop": 26000,
+          "mobile": 12000,
+          "tablet": 7400
+        },
+        {
+          "date": "2024-12-05",
+          "desktop": 25000,
+          "mobile": 13000,
+          "tablet": 7000
+        },
+        {
+          "date": "2024-12-06",
+          "desktop": 26500,
+          "mobile": 13000,
+          "tablet": 7800
+        },
+        {
+          "date": "2024-12-07",
+          "desktop": 23000,
+          "mobile": 12000,
+          "tablet": 7100
+        },
+        {
+          "date": "2024-12-08",
+          "desktop": 23500,
+          "mobile": 12500,
+          "tablet": 7700
+        }
+      ],
+      "funnel": {
+        "visitors": 100,
+        "viewProduct": 50,
+        "addCart": 30,
+        "checkout": 20,
+        "purchase": 10
+      }
+    }
+  ]
+}
