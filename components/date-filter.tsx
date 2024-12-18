@@ -24,7 +24,7 @@ export function DataFilter() {
 
   useEffect(() => {
     handleDateChange("2024-12-16");
-  }, [handleDateChange]);
+  }, []);
 
   return (
     <div className="mb-4 flex space-x-4 items-center mt-4">
