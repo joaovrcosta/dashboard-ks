@@ -10,7 +10,12 @@ export type ProjectionData = {
   totalOrders: number;
   ticketMedio: number;
   repurchaseRate: number;
-  billing: any;
+  billing: Array<{
+    date: string;
+    desktop: number;
+    mobile: number;
+    tablet: number;
+  }>;
   funnel: {
     visitors: number;
     viewProduct: number;
@@ -18,17 +23,34 @@ export type ProjectionData = {
     checkout: number;
     purchase: number;
   };
-  paymentType: {
-    credit: number;
-    debit: number;
-  };
+  paymentType: Array<{
+    month: string;
+    desktop: number;
+  }>;
   registrations: {
     customerRegistrations: number;
     totalRegistrations: number;
   };
-  top10States: any;
-  top10Ages: any;
-  gender: any;
-  devices: any;
-  os: any;
+  top10States: Array<{
+    month: string;
+    desktop: number;
+  }>;
+  top10Ages: Array<{
+    month: string;
+    desktop: number;
+  }>;
+  gender: Array<{
+    browser: string;
+    visitors: number;
+    fill: string;
+  }>;
+  devices: Array<{
+    browser: string;
+    visitors: number;
+    fill: string;
+  }>;
+  os: Array<{
+    month: string;
+    desktop: number;
+  }>;
 };
